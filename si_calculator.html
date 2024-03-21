@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interest Calculator</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap');
         body{
             background-color: #8EC5FC;
             background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
@@ -55,5 +56,18 @@
         </p>
         <button class="btn" onclick="">Calculate</button>
     </div>
+    <script>
+        function calculate(){
+            const principle= document.getElementById("p");
+
+            const rate= document.getElementById("r");
+
+            const time= document.getElementById("t");
+
+            const interest= (parseInt(principle.value)*parseInt(rate.value)*parseInt(time.value))/100;
+            const result=document.getElementById("answer");
+            result.innerText=`Interest: ${interest}`;
+        }
+    </script>
 </body>
 </html>
